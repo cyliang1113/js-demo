@@ -8,22 +8,26 @@
 
 </body>
 <script type="text/javascript">
-	console.info(this)
+// 	console.info(this)
 
 	function Person() {
 		var name = "leo"
-// 		console.info(name)
-// 		console.info(this)
+		// 		console.info(name)
+		// 		console.info(this)
 		this.age = 12
 	}
 	Person.prototype.sayHi = function() {
+		console.info(this)
 		console.info("Hi")
 	}
-// 	var p = new Person()
-// 	console.info(p)
-// 	console.info(Person)
-// 	console.info(Person.prototype)
-// 	console.info(Person.call)
-// 	Person()
+	Person.sayHi = Person.prototype.sayHi
+	// 	var p = new Person()
+	// 	console.info(p)
+	// 	console.info(Person)
+	// 	console.info(Person.prototype)
+	// 	console.info(Person.call)
+	// 	Person()
+	Person.prototype.sayHi()
+	Person.sayHi()
 </script>
 </html>
